@@ -7,9 +7,10 @@ function App() {
 
   return (
     <>
-      <Header/>
-      <CreateTask/>
+      <Header/>    
       <Task/>
+      <Task/>
+      <CreateTask/>
     </>
   )
 }
