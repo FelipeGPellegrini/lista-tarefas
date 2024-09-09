@@ -10,7 +10,7 @@ function App() {
       <Header/>    
       <Task/>
       <Task/>
-      <CreateTask/>
+      {/* <CreateTask/> */}
     </>
   )
 }
