@@ -1,18 +1,30 @@
-import Header from "./components/Header"
-import CreateTask from "./components/CreateTask"
-import Task from "./components/Task"
+import React, { useState } from 'react';
+import CreateTask from './components/CreateTask';
+import Task from './components/Task';
+import Header from './components/Header'
 import "./index.css"
 
-function App() {
+const App = () => {
+  const [tasks, setTasks] = useState([]);
+
+  const addTask = (title, description) => {
+    setTasks([...tasks, { title, description }]);
+  };
 
   return (
-    <>
-      <Header/>    
-      <Task/>
-      <Task/>
-      {/* <CreateTask/> */}
-    </>
-  )
-}
+    <div>
+      <Header/>
+      
+      
+      <div>
+        {tasks.map((task, index) => (
+          <Task key={index} title={task.title} description={task.description} />
+        ))}
+      </div>
+      <CreateTask addTask={addTask} /> 
+    </div>
+  );
+};
 
-export default App
+export default App;
+
