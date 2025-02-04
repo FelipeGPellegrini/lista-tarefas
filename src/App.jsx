@@ -14,8 +14,6 @@ const App = () => {
   return (
     <div>
       <Header/>
-      
-      
       <div>
         {tasks.map((task, index) => (
           <Task key={index} title={task.title} description={task.description} />
